@@ -1,11 +1,11 @@
-$('#start-window').hide();
-$('#done-window').hide();
 
-/*window.onload = function() {
+
+
+window.onload = function() {
     $('#trivia-game').hide();
-    
+    $('#done-window').hide();
     $("#start-btn").on("click", startGame);
-};*/
+};
 
 var count = 60;
 var timer = $('#timer');
@@ -20,23 +20,19 @@ if (count == 0){
     done();
 }
 
-
-$('#submit-btn').on('click', function(){
-    done();
-
+function done(){
     $('#trivia-game').hide();
     $('#done-window').show();
-});
+
+}
+$('#submit-btn').on('click', done);
 
 $('#restart-btn').on('click', function(){
     location.reload();
 });
 
 
-function done(){
 
-
-}
 
 function timeIt(){
     if (count > 0){
