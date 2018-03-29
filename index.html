@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <!--Personal style sheet(s) -->
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <title>Trivia Game</title>
+</head>
+<body>
+    
+    <div class="container">
+        <div class="row">
+            <div id="title-jumbo" class="jumbotron">
+                <h1 class="text-center">Trivia Game</h1>
+            </div>
+        </div>
+
+        <div class="row">
+            <div id="start-window" class="jumbotron">
+                <div class="text-center">
+                    <button id="start-btn" type="button">Start</button>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="row">
+            <div id="trivia-game" class="jumbotron">
+                 
+                <div class="row">
+                    <p>Time Remaining: <span id="timer"></span> seconds</p>
+                </div><br>
+                
+                <div class="row text-center">
+                    <div class="col-md-6 col-sm-12">
+                        <div class="question">
+                            <p>In our solar system which two planets are known as ice giants?</p>
+
+                            <div class="row text-center">
+                                <form action="/action_page.php">
+                                    <div class="col-md-2 col-md-offset-1"><input type="checkbox" name="question1" value="Uranus"><br>Uranus</div>
+                                    <div class="col-md-2"><input type="checkbox" name="question1" value="Pluto"><br>Pluto</div>
+                                    <div class="col-md-2"><input type="checkbox" name="question1" value="Jupiter"><br>Jupiter</div>
+                                    <div class="col-md-2"><input type="checkbox" name="question1" value="Saturn"><br>Saturn</div>
+                                    <div class="col-md-2"><input type="checkbox" name="question1" value="Neptune"><br>Neptune</div>    
+                                </form>    
+                            </div>     
+                        </div>
+                            
+                    </div>
+
+                    <div class="col-md-6 col-sm-12">
+                        <div class="question">
+                            <p>What was the name of the first United States space station?</p>
+
+                            <div class="row text-center">
+                                <form action="/action_page.php">
+                                    <div class="col-md-3"><input type="radio" name="question2" value="Uranus"><br>SkyLab</div>
+                                    <div class="col-md-3"><input type="radio" name="question2" value="Pluto"><br>SpaceLab</div>
+                                    <div class="col-md-3"><input type="radio" name="question2" value="Jupiter"><br>SpaceTech</div>
+                                    <div class="col-md-3"><input type="radio" name="question2" value="Neptune"><br>SpaceX</div>    
+                                </form>    
+                            </div>     
+                        </div>
+                            
+                    </div> 
+
+                    <div class="col-md-6 col-sm-12">
+                        <div class="question">
+                            <p>What is the farthest human-made object from planet Earth?</p>
+
+                            <div class="row text-center">
+                                <form action="/action_page.php">
+                                    <div class="col-md-3"><input type="checkbox" name="question2" value="Uranus"><br>Pioneer 10</div>
+                                    <div class="col-md-3"><input type="checkbox" name="question2" value="Pluto"><br>Pioneer 11</div>
+                                    <div class="col-md-3"><input type="checkbox" name="question2" value="Jupiter"><br>Voyager 1</div>
+                                    <div class="col-md-3"><input type="checkbox" name="question2" value="Saturn"><br>Voyager 2</div>    
+                                </form>    
+                            </div>     
+                        </div>
+                            
+                    </div> 
+
+                    <div class="col-md-6 col-sm-12">
+                        <div class="question">
+                            <p>The Great Red Spot is a gigantic storm located on which planet in our solar system?</p>
+
+                            <div class="row text-center">
+                                <form action="/action_page.php">
+                                    <div class="col-md-2 col-md-offset-1"><input type="checkbox" name="question2" value="Uranus"><br>Uranus</div>
+                                    <div class="col-md-2"><input type="checkbox" name="question2" value="Pluto"><br>Pluto</div>
+                                    <div class="col-md-2"><input type="checkbox" name="question2" value="Jupiter"><br>Jupiter</div>
+                                    <div class="col-md-2"><input type="checkbox" name="question2" value="Saturn"><br>Saturn</div>
+                                    <div class="col-md-2"><input type="checkbox" name="question2" value="Neptune"><br>Neptune</div>    
+                                </form>    
+                            </div>     
+                        </div>
+                            
+                    </div> 
+                    
+                    
+                </div>   
+
+                <br><br>
+                
+                <div class="row text-center">
+                    <button id="submit-btn" type="button">Submit</button>
+                </div>
+                
+
+
+            </div>
+        </div>
+
+        <div class="row">
+            <div id="done-window" class="jumbotron col-md-6 col-md-offset-3">
+                <div class="row">
+                    <p>Number of Correct Answers: <span id="num-correct">0</span></p>
+                </div>
+
+                <div class="row">
+                    <p>Number of Incorrect Answers: <span id="num-incorrect">0</span></p>
+                </div>
+
+                <div class="row">
+                    <p>Number of Unanswered Questions: <span id="num-blank">0</span></p>
+                </div><br>
+
+                <div class="row text-center">
+                    <button id="restart-btn" type="button">Restart</button>
+                </div>
+            </div>
+               
+
+        </div>
+    </div>
+
+
+    <script src="assets/javascript/game.js"></script>
+</body>
+</html>
